@@ -4,12 +4,12 @@ Don't worry about it ;)
 ## Commands
 ### Windows
 ```ps1
-Get-Content Containerfile | docker-compose build -t alpine:os - 
-docker-compose run -d alpine:os
 docker compose up
+docker-compose run osdev
 ```
 
 ### macOS/Linux
 ```sh
-docker build -t alpine:os - < Containerfile
+docker compose up
+docker-compose run osdev
 ```
