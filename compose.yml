@@ -2,7 +2,7 @@ version: "3.9"
 services:
   osdev:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Containerfile
     working_dir: /mnt/osdev
     volumes:
       - type: bind
