@@ -13,3 +13,6 @@ docker-compose run osdev
 docker compose up
 docker-compose run osdev
 ```
+
+## Build
+The build machine is `x86_64-alpine-linux-musl`, while the target machine is `riscv64-none-elf`.
