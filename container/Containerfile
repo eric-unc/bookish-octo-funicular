@@ -1,6 +1,7 @@
-FROM alpine
+FROM ubuntu
 
-RUN apk update
-RUN apk add build-base gcc abuild binutils binutils-doc gcc-doc bison flex gmp mpc mpfr4 texinfo
+RUN apt update
+# gcc dependencies
+#RUN apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libcloog-isl-dev libisl-dev 
 
-ENTRYPOINT ["ash"]
+ENTRYPOINT ["bash"]
