@@ -2,6 +2,8 @@ FROM ubuntu
 
 RUN apt update
 # gcc dependencies
-#RUN apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libcloog-isl-dev libisl-dev 
+RUN apt install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
+# other stuff used for building
+RUN apt install wget
 
 ENTRYPOINT ["bash"]
