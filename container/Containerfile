@@ -6,8 +6,11 @@ RUN apt install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev
 # other stuff used for building
 RUN apt install -y wget
 
-RUN cd /mnt/osdev && apt mkdir -p temp
-RUN cd /mnt/osdev/temp && wget -O build-binutils.tar.xz https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz && tar -xf build-binutils.tar.xz
-RUN cd /mnt/osdev/temp && wget -O build-gcc.tar.xz https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz && tar -xf build-gcc.tar.xz
+#RUN cd /mnt/osdev && apt mkdir -p temp
+#RUN cd /mnt/osdev/temp && wget -O build-binutils.tar.xz https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz && tar -xf build-binutils.tar.xz
+#RUN cd /mnt/osdev/temp && wget -O build-gcc.tar.xz https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz && tar -xf build-gcc.tar.xz
+RUN cd /usr/src/
+#RUN wget -O build-binutils.tar.xz https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz && tar -xf build-binutils.tar.xz && rm build-binutils.tar.xz
+#RUN wget -O build-gcc.tar.xz https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz && tar -xf build-gcc.tar.xz && rm build-gcc.tar.xz
 
 ENTRYPOINT ["bash"]
